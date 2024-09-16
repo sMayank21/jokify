@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="/" id="form" class="form" method="POST">
+                <select name="type" class="selector form-select">
+                    <option value="Any" data-display="Any">Random type</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Misc">Misc</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Pun">pun</option>
+                    <option value="Spooky">Spooky</option>
+                    <option value="Christmas">Christmas</option>
+                </select>
+                <select name="language" class="selector lang">
+                    <option value="" data-display="english">en - English</option>
+                    <option value="cs">cs - Czech</option>
+                    <option value="de">de - German</option>
+                    <option value="es">es - Spanish</option>
+                    <option value="fr">fr - French</option>
+                    <option value="pt">pt - Portuguese</option>
+                </select>
+                <button type="submit" class="form-submit">Go</button>
+            </form>
+
+            <div class="res">
+                <% if(locals.setup && locals.delivery) {%>
+                    <h3><%= setup %></h3>
+                    <h2><%= delivery %></h2>
+                <% } %>
+                <% if(locals.joke){ %>
+                    <h3><%= joke %></h3>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
