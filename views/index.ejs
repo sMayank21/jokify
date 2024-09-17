@@ -30,17 +30,22 @@
                 <br>
                 <h4 style="display: inline;">blacklist::--</h4>
                 <input type="checkbox" name="blacklist" value="nsfw" >
-                <label for="nsfw">nsfw</label>
+                <label>nsfw</label>
                 <input type="checkbox" name="blacklist" value="religious">
-                <label for="religious">religious</label>
+                <label>religious</label>
                 <input type="checkbox" name="blacklist" value="political">
-                <label for="political">political</label>
+                <label>political</label>
                 <input type="checkbox" name="blacklist" value="racist">
-                <label for="racist">racist</label>
+                <label>racist</label>
                 <input type="checkbox" name="blacklist" value="sexist">
-                <label for="sexist">sexist</label>
+                <label>sexist</label>
                 <input type="checkbox" name="blacklist" value="explicit">
-                <label for="explicit">explicit</label>
+                <label>explicit</label>
+                <br>
+                <input type="checkbox" name="jokeType" value="single">
+                <label>single</label>
+                <input type="checkbox" name="jokeType" value="twopart">
+                <label>twopart</label>
                 <br>
                 <button type="submit" class="form-submit">Go</button>
                 
@@ -52,7 +57,7 @@
                     <h2><%= delivery %></h2>
                 <% } %>
                 <% if(locals.joke){ %>
-                    <h3><%= joke %></h3>
+                    <h5><%= joke %></h5>
                 <%}%>
             </div>
         </div>

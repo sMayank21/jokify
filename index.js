@@ -18,10 +18,12 @@ app.post("/",async(req,res)=>{
         const joke_type = req.body.type;
         const language = req.body.language;
         const blacklist = req.body.blacklist;
+        const type = req.body.jokeType;
         const submit = await axios(API_URL+`/${joke_type}`,{
             params:{
                lang: language,
-               blacklistFlags: blacklist
+               blacklistFlags: blacklist,
+               type:type
             }
         });
         let result = submit.data;
